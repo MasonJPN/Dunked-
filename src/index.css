@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: -60px;
+}
+
+.hero-img {
+  width: 100%;
+  height: 75vh;
+  object-fit: cover;
+  object-position: top center; /* ✅ FIX */
+}
+
+
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* ✅ added */
+
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  z-index: 100;
+
+  background: transparent;
+}
+
+/* LEFT NAV */
+.nav-left {
+  display: flex;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  list-style: none;
+  color: #ef3434;
+}
+
+
+.nav-left li {
+  position: relative;
+  font-size: clamp(0.85rem, 1.2vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+/* underline hover effect */
+.nav-left li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+
+  width: 0%;
+  height: 2px;
+  background-color: #ef3434;
+
+  transform: translateX(-50%);
+  transition: width 0.25s ease;
+}
+
+.nav-left li:hover::after {
+  width: 100%;
+}
+
+/* CENTER TITLE */
+.navbar-container h1 {
+  display: flex;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 600;
+  letter-spacing: clamp(0.5px, 0.3vw, 1px); /* ✅ changed */
+  color: #ef3434;
+  white-space: nowrap;
+}
+
+/* RIGHT CART */
+.nav-right {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.nav-right img {
+  width: clamp(22px, 2.5vw, 30px);
+  height: auto;
+  cursor: pointer;
+  filter: invert(1);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-right img:hover {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+.shop-header {
+  margin-top: 200px;
+  color: #ef3434;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.shop-header h3 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  letter-spacing: 2px;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  text-decoration: underline;
+}
+
+.shop-header h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: underline;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  color: black;
+}
+
+/* Cards Grid */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  gap: 3rem;
+
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 1rem 3rem;
+}
+
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+
+  color: rgb(0, 0, 0);
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.item-add-btn {
+  color: black;
+  border-radius: 20px;
+  height: 50px;
+}
+
+/* Filter Buttons */
+.brand-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 175px;
+  flex-wrap: wrap;
+}
+
+.brand-buttons button {
+  margin-bottom: 65px;
+  padding: 0.5rem 1.5rem;
+  border: 2px solid #ef3434;
+  background: transparent;
+  color: #ef3434;
+  font-weight: 600;
+  font-size: clamp(0.85rem, 1vw, 1rem);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.brand-buttons button:hover,
+.brand-buttons button.active {
+  background-color: #ef3434;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.footer-container {
+  margin-top: 150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 3rem clamp(1rem, 5vw, 5rem);
+  background-color: #111;
+  color: white;
+  flex-wrap: wrap;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.footer-left,
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-left h2,
+.footer-right h2 {
+  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.footer-left h2 {
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.footer-left h2:hover {
+  color: #ef3434;
+}
+
+.footer-right input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin: 0.5rem 0;
+  width: 250px;
+  max-width: 100%;
+}
+
+.footer-right input::placeholder {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #888;
+}
+
+.newsletter-btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  border: none;
+  background-color: #ef3434;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  width: fit-content;
+}
+
+.newsletter-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.85;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav-left {
+    gap: 1rem;
+  }
+
+  .nav-left li {
+    font-size: 0.85rem;
+  }
+
+  .navbar-container h1 {
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* ADD THESE MISSING STYLES */
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-right input {
+    width: 100%;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+
+
+
