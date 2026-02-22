@@ -1,5 +1,8 @@
 Dunked — Sneaker Store (React + Vite)
 
+ACCESS PAGE: https://dunked.netlify.app/
+
+
 Dunked is a modern sneaker e-commerce web application built with React and Vite. This project was created as a portfolio piece to demonstrate front-end development skills, clean component architecture, and realistic shopping functionality.
 
 Features
