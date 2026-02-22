@@ -33,7 +33,7 @@ export default function ClothesCard({ item }) {
         <select
           value={jerseySize}
           onChange={(e) => setJerseySize(e.target.value)}
-          className="size-selector"
+          className="item-add-btn" 
         >
           <option value="">Select Size</option>
           {sizes.map((size) => (

@@ -19,6 +19,9 @@ export default function CartDisplay() {
             {cartItems.length === 0 ? (
                 <p className="empty-cart-heading">Your Cart Is Empty</p>
             ) : (
+
+
+                
                 cartItems.map((item) => (
                     <div key={item.id} className="cart-item">
                         <div className="cart-product">

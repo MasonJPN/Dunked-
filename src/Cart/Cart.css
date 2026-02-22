@@ -7,12 +7,14 @@
 }
 
 .cart-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.5fr auto; 
   align-items: center;
   padding: 20px;
   border-bottom: 1px solid #eee;
   margin: 15px 0;
 }
+
 
 .cart-remove {
   margin-left: auto;
@@ -42,7 +44,7 @@
   gap: 20px;
 }
 
-.cart-item .card img {
+.cart-product img {
   width: 150px;
   height: 100px;
   object-fit: cover;
@@ -79,3 +81,8 @@
   cursor: pointer;
   border-radius: 20px;
 }
+
+
+
+
+

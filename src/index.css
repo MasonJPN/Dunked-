@@ -304,11 +304,11 @@
 
 @media screen and (max-width: 768px) {
   .nav-left {
-    gap: 1rem;
+    gap: 5px;
   }
 
   .nav-left li {
-    font-size: 0.85rem;
+    font-size: 0.55rem;
   }
 
   .navbar-container h1 {
